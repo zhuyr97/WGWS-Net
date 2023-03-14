@@ -1,5 +1,5 @@
 # WGWS-Net (CVPR 2023)
-This is the official implementation of the CVPR 2023 paper [Learning Weather-General and Weather-Specific Features for Image Restoration Under Multiple Adverse Weather Conditions](https://xxxx).
+This is the official implementation of the CVPR 2023 paper [Learning Weather-General and Weather-Specific Features for Image Restoration Under Multiple Adverse Weather Conditions](https://github.com/zhuyr97/WGWS-Net).
 
 ## Abstract
 
