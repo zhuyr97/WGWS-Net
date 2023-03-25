@@ -33,6 +33,7 @@ scenes and densify the rain streaks by exploiting the temporal information. Usin
 You can directly test the performance of the pre-trained model as follows
 1. Modify the paths of datasets and pre-trained model.
 2. Test the model
+
    2.1 On the Setting 1
       ```python
       python testing_model_Seting1.py --flag K1 --base_channel 18 --num_block 6 --save_path [path to your save_path]
@@ -45,7 +46,7 @@ You can directly test the performance of the pre-trained model as follows
       ```python
       python testing_model_Seting3.py --flag K1 --base_channel 18 --num_block 6 --save_path [path to your save_path]
       ```   
-You can check the output in `[path to your save_path]`.
+You can check the processed results in `[path to your save_path]`.
 
 ## Citation
 If you find this work or code useful for your research, please cite:
