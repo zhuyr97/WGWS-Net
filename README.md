@@ -5,16 +5,20 @@ This is the official implementation of the CVPR 2023 paper [Learning Weather-Gen
 
 _Image restoration under multiple adverse weather conditions aims to remove weather-related artifacts by using a single set of network parameters. In this paper, we find that image degradations under different weather conditions contain general characteristics as well as their specific characteristics. Inspired by this observation, we design an efficient unified framework with a two-stage training strategy to explore the weather-general and weather-specific features. The first training stage aims to learn the weather-general features by taking the images under various weather conditions as inputs and outputting the coarsely restored results. The second training stage aims to learn to adaptively expand the specific parameters for each weather type in the deep model, where the requisite positions for expanding weather-specific parameters are automatically learned. Hence, we can obtain an efficient and unified model for image restoration under multiple adverse weather conditions. Moreover, we build the first real-world benchmark dataset with multiple weather conditions to better deal with real-world weather scenarios. Experimental results show that our method achieves superior performance on all the synthetic and real-world benchmark datasets.
 
-<p align=center><img width="80%" src="figs/framework.png"/></p>
+<p align=center><img width="90%" src="figs/framework.png"/></p>
 
 ## Datasets
-| Setting   | Weather Types          | Datasets                           | Training Configurations (Refer to previous methods) |
+| Setting   | Weather Types          | Datasets                           | Training Configurations  |
 | :---------: | :----------------------: | :----------------------------------: | :---------------------------------------------------: |
 | Setting 1 | (Rain, RainDrop, Snow) | ([Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), [RainDrop](https://github.com/rui1996/DeRaindrop), [Snow100K](https://sites.google.com/view/yunfuliu/desnownet)) | Uniformly sampling 9000 images pairs                |
 | Setting 2 | (Rain, Haze, Snow)     | ([Rain1400](https://xueyangfu.github.io/projects/cvpr2017.html), [RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-v0), [Snow100K](https://sites.google.com/view/yunfuliu/desnownet))       | Uniformly sampling 5000 images pairs                |
 | Setting 3 | (Rain, Haze, Snow)     | (SPA+, [REVIDE](https://github.com/BookerDeWitt/REVIDE_Dataset), RealSnow)            | Uniformly sampling 160000 images patches            |
 
-Note: 
+**Note**:  
+- The training configurations follow the previous methods.
+- `SPA+`:  we reveal the duplication and redundancy issues in SPA (Real-rain dataset) and handle these problems in SPA+. We first merge the images with repeated background 
+scenes and densify the rain streaks by exploiting the temporal information. Using SPA+ could achieve comparable performance and better handle the dense rain scenes. The amount of SPA+ is a quarter of the original SPA dataset, which obviously facilitates future research. SPA+ could be downloaded from [here](https://pan.baidu.com/s/1fgI4G-OEiLTAV-sfSXVYVA?pwd=cvpr)  (Code: cvpr)
+- `RealSnow`: inspired by SPA-Net, we build the first real-world desnowing dataset by using the background-static videos to acquire real-world snowing image pairs. RealSnow could be downloaded from [here](https://pan.baidu.com/s/1XkQh_Us5a09sanusSxEvEg?pwd=cvpr)  (Code: cvpr)
 
 *  [Setting 1] 
 *  [Setting 2]
