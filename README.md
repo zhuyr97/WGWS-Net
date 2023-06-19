@@ -28,10 +28,21 @@ scenes and densify the rain streaks by exploiting the temporal information. Usin
 [Setting 1](https://drive.google.com/drive/folders/1B0R3SI6D5PkAJGkx_axUm6V5NpjkQllo?usp=share_link) | [Setting 2](https://drive.google.com/drive/folders/1B0R3SI6D5PkAJGkx_axUm6V5NpjkQllo?usp=share_link) | [Setting 3](https://drive.google.com/drive/folders/1B0R3SI6D5PkAJGkx_axUm6V5NpjkQllo?usp=share_link)
 
 ## Train
+1. The training stage 1:
+      ```python
+      python training_Setting1_Stage1.py --experiment_name [experiment_name]  --base_channel 18 --fix_sample 9000 --BATCH_SIZE 4 --Crop_patches 224 --EPOCH 100 --T_period 
+             50  --learning_rate 0.0002   --addition_loss VGG --depth_loss True --Aug_regular False --print_frequency 100
+      ```   
+2. The training stage 2: 
+      ```python
+      python training_Setting1_wDP_Stage2.py --experiment_name [experiment_name] --lam 0.008 --VGG_lamda 0.2  
+             --learning_rate 0.0001 --fix_sample 9000 --Crop_patches 224 --BATCH_SIZE 12 --EPOCH 120 --T_period 30 --flag K1 --base_channel 18 --print_frequency 100         
+             --pre_model  [path to the pre-trained weights at the training stage 1]
+      ```   
 
 ## Test
 You can directly test the performance of the pre-trained model as follows
-1. Modify the paths of datasets and pre-trained model.
+1. Modify the paths of datasets and pre-trained weights.
 2. Test the model
 
    2.1 On the Setting 1
