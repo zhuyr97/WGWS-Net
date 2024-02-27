@@ -63,7 +63,7 @@ You can check the processed results in `[path to your save_path]`.
 If you find this work or code useful for your research, please cite:
 ```
 @inproceedings{zhu2023Weather,
-  title={Represent, Compare, and Learn: A Similarity-Aware Framework for Class-Agnostic Counting},
+  title={Learning Weather-General and Weather-Specific Features for Image Restoration Under Multiple Adverse Weather Conditions},
   author={Yurui Zhu and Tianyu Wang and Xueyang Fu and Xuanyu Yang and Xin Guo and Jifeng Dai and Yu Qiao and Xiaowei Hu},
   booktitle={Proc. IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2023}
